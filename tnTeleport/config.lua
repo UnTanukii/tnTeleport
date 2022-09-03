@@ -19,7 +19,7 @@ tnTeleport.Positions = {
                 ['rgb'] = {255,0,0},
             }
         },
-    }
+    },
 
 }
 
