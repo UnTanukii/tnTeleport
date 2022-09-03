@@ -42,7 +42,9 @@ Citizen.CreateThread(function()
             wait = 0
                 if Job then
                     if ESX.PlayerData.job.name == Job then
-                        ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
+                        if Enter.Marker.show then
+                            ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
+                        end
                 
                         if distanceEnter <= tnTeleport.Distances['Interaction'] then
                             wait = 0
@@ -54,7 +56,9 @@ Citizen.CreateThread(function()
                         end
                     end
                 else
-                    ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
+                    if Enter.Marker.show then
+                        ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
+                    end
             
                     if distanceEnter <= tnTeleport.Distances['Interaction'] then
                         wait = 0
@@ -74,7 +78,9 @@ Citizen.CreateThread(function()
             wait = 0
                 if Job then
                     if ESX.PlayerData.job.name == Job then
-                        ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Exit.Marker.rgb)
+                        if Exit.Marker.show then
+                            ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Exit.Marker.rgb)
+                        end
                 
                         if distanceExit <= tnTeleport.Distances['Interaction'] then
                             wait = 0
@@ -86,7 +92,9 @@ Citizen.CreateThread(function()
                         end
                     end
                 else
-                    ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Exit.Marker.rgb)
+                    if Exit.Marker.show then
+                        ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Exit.Marker.rgb)
+                    end
             
                     if distanceExit <= tnTeleport.Distances['Interaction'] then
                         wait = 0
