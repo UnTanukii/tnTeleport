@@ -2,7 +2,7 @@ tnTeleport = {}
 
 tnTeleport.Positions = {
     {
-        ['Job'] = false,
+        ['Job'] = "police", --Only People with police job can use this teleporter
         ['Enter'] = {
             ['Coords'] = { x = -75.117118835449, y = -824.54711914063, z = 321.29183959961, h = 90},
             ['Notification'] = '~INPUT_CONTEXT~ pour descendre', --https://docs.fivem.net/docs/game-references/controls/
@@ -21,7 +21,7 @@ tnTeleport.Positions = {
         },
     },
     {
-        ['Job'] = false,
+        ['Job'] = false, --Everybody can use this teleporter
         ['Enter'] = {
             ['Coords'] = { x = 206.33645629883, y = -1851.9584960938, z = 27.479230880737, h = 142.43612670898 },
             ['Notification'] = '~INPUT_CONTEXT~ pour entrer',
