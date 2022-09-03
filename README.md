@@ -8,4 +8,4 @@
 
 - Configuration simple et complète
 - <b>0.00MS</b> quand il n'est pas utilisé | <b>0.06MS</b> Maximum en utilisation
-- Script pour se téléporter d'un point A à un point B (Exemple : Ferme de Drogue, Tour,...)
+- Script pour se téléporter d'un point A à un point B (Exemple : Ferme de drogues, Tour,...)
