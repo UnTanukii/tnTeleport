@@ -21,6 +21,11 @@ AddEventHandler('esx:setJob', function(job)
     ESX.PlayerData.job = job
 end)
 
+RegisterNetEvent('esx:setJob2')
+AddEventHandler('esx:setJob2', function(job2)
+    ESX.PlayerData.job2 = job2
+end)
+
 Citizen.CreateThread(function()
     while true do
     local wait = 1000
@@ -29,6 +34,7 @@ Citizen.CreateThread(function()
 
         for k,v in pairs(tnTeleport.Positions) do
             local Job = v['Job']
+            local Job2 = v['Job2']
 
             local Enter = v["Enter"]
             local EnterCoords = v['Enter']['Coords']
@@ -55,7 +61,22 @@ Citizen.CreateThread(function()
                             end
                         end
                     end
-                else
+                elseif Job2 then
+                    if ESX.PlayerData.job2.name == Job2 then
+                        if Enter.Marker.show then
+                            ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
+                        end
+                
+                        if distanceEnter <= tnTeleport.Distances['Interaction'] then
+                            wait = 0
+                            ESX.ShowHelpNotification(Enter.Notification, false, false, 1)
+
+                            if IsControlJustPressed(1,51) then
+                                TeleportPlayer(ExitCoords)
+                            end
+                        end
+                    end
+                elseif not Job and not Job2 then
                     if Enter.Marker.show then
                         ShowMarker(Enter.Marker.type, EnterCoords.x, EnterCoords.y, EnterCoords.z, Enter.Marker.rgb)
                     end
@@ -91,7 +112,22 @@ Citizen.CreateThread(function()
                             end
                         end
                     end
-                else
+                elseif Job2 then
+                    if ESX.PlayerData.job2.name == Job2 then
+                        if Exit.Marker.show then
+                            ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Enter.Marker.rgb)
+                        end
+                
+                        if distanceExit <= tnTeleport.Distances['Interaction'] then
+                            wait = 0
+                            ESX.ShowHelpNotification(Exit.Notification, false, false, 1)
+
+                            if IsControlJustPressed(1,51) then
+                                TeleportPlayer(EnterCoords)
+                            end
+                        end
+                    end
+                elseif not Job and not Job2 then
                     if Exit.Marker.show then
                         ShowMarker(Exit.Marker.type, ExitCoords.x, ExitCoords.y, ExitCoords.z, Exit.Marker.rgb)
                     end
