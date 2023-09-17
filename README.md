@@ -5,7 +5,7 @@
 - Script to teleport from a point A to a point B (Example: Drug Farm, Tower,...)
 - You can choose that only one job has access to the point or only one job2 has access
 
-### If you have any questions, you can add me on Discord : <u>Tanukii#7115</u>
+### If you have any questions, you can add me on Discord : <u>@untanukii</u>
 
 # tnTeleport 0.00MS
 
