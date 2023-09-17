@@ -14,4 +14,4 @@
 - Script pour se téléporter d'un point A à un point B (Exemple : Ferme de drogues, Tour,...)
 - Vous pouvez choisir qu'un seul job ait accès à ce point ou alors qu'un seul job2 ait accès au point.
 
-### Si vous avez une question, vous pouvez m'ajouter sur Discord : <u>Tanukii#7115</u>
+### Si vous avez une question, vous pouvez m'ajouter sur Discord : <u>@untanukii</u>
